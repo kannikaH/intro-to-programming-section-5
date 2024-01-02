@@ -40,14 +40,14 @@ function checkGuess() {
   }
 
   if (guess !== targetNumber) {
-    if (guess < 0) {
+    if (guess < 1) {
       numberOfGuessesMessage.style.display = '';
       numberOfGuessesMessage.style.color = "red";
       numberOfGuessesMessage.innerHTML = `Must be greater than 0`;
     } else if (guess >99){
       numberOfGuessesMessage.style.display = '';
-      numberOfGuessesMessage.innerHTML = `Must be less than 100`;
       numberOfGuessesMessage.style.color = "red";
+      numberOfGuessesMessage.innerHTML = `Must be less than 100`;
     } else {
        if (guess < targetNumber) {
         tooLowMessage.style.display = '';
